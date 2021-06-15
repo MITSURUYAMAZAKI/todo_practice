@@ -22,13 +22,16 @@
         <div class="row mt-4 px-4">
             <div class="col-12">
                 <form action="store.php" method="post">
+                <!-- ↑POSTメゾット -->
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" class="form-control" name="title" id="title">
+                        <!-- ↑この値を受け取りたい -->
                     </div>
                     <div class="form-group">
                         <label for="contents">Contents</label>
                         <textarea class="form-control" name="contents" id="contents" cols="30" rows="10"></textarea>
+                        <!-- ↑この値を受け取りたい -->
                     </div>
                     <div class="form-group">
                         <div class="custom-file">
