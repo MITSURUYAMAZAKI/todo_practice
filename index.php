@@ -64,10 +64,10 @@ $tasks =  $task->getAll();
                 <div class="card">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><?php h($task["title"]);?></h5>
+                        <h5 class="card-title"><?= h($task["title"]);?></h5>
                         <!-- hは「function.php」で記載した関数 -->
                         <p class="card-text">
-                            <?php h($task["contents"]);?>
+                            <?= h($task["contents"]);?>
                         </p>
                         <div class="text-right d-flex justify-content-end">
                             <!-- * href内を変更する -->
