@@ -10,7 +10,7 @@ require_once('./function.php');
 $task = new Task();
 $tasks =  $task->getAll();
 // getAllは「Model.php」に記載したメソッド
-// var_dump($tasks);
+var_dump($tasks);
 
 
 ?>

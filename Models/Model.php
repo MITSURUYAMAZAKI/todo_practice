@@ -41,6 +41,7 @@ class Model
 
         // 実行結果を取得
         $tasks = $stmt->fetchAll();
+        // fetchAllは全権取得の関数
 
         // return === 関数の呼び出し元に、値を返す
         return $tasks;
