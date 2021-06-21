@@ -75,7 +75,7 @@ $tasks =  $task->getAll();
                             <!-- GET通信で$task['id']を引き渡す -->
                             <form action="delete.php" method="post">
                                 <!-- * valueの中にtaskのidが入るようにする -->
-                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="id" value="<?= h($task['id']);?>">
                                 <button type="submit" class="btn text-danger">DELETE</button>
                             </form>
                         </div>
