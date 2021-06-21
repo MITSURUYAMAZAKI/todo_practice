@@ -41,15 +41,26 @@ class Model
 
         // 実行結果を取得
         $tasks = $stmt->fetchAll();
-        // fetchAllは全権取得の関数
+        // fetchAllは全件取得の関数
 
         // return === 関数の呼び出し元に、値を返す
         return $tasks;
     }
 
     // * findById()を以下に追加する
+    public function findById($id)
+    {
+        // 準備
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' .
+        $this->table . ' WHERE id = ?');
 
+        // 実行
+        $stmt->execute([$id]);
 
+        $task = $stmt->fetch();
+
+        return $task;
+    }
     
 
     
