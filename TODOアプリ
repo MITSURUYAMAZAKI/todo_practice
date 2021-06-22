@@ -25,3 +25,19 @@ create機能を作成したい
 
 連想配列のときは引数を連続して記載すると、配列の中の配列の値が取り出せる。
 $arr2 =[0]['text']
+
+inputタグのtypeの種類
+  text
+  email
+  password
+  hidden
+  submit
+  tel
+  checkbox
+  radiobox
+  file
+  
+  <a href="edit.php?id=<?= h($task['id']);?&text=AAA>" class="btn text-success">EDIT</a>
+  aタグはname属性を持てない。
+  idがGET通信のキーになる。
+  GET送信はデータを送るときに限られたものではない。

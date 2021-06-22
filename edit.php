@@ -8,8 +8,13 @@ require_once("./function.php");
 // 2. データの受け取り
 $id = $_GET['id'];
 
-// 3. DBへのデータ保存
-$task = (new Task())-> findById($id);
+// 3. DBからデータ取得
+// $task = (new Task())-> findById($id); １行で書くやり方も
+$instance = new Task();
+$task = $instance -> findById($id);
+// $$task = new Task();
+// $task = $task -> findById($id); ドルタスクを上書き
+var_dump($task);
 
 ?>
 <!DOCTYPE html>

@@ -23,6 +23,7 @@ class Task extends Model
     }
     // * update()を以下に追加する
     public function update($data)
+    // $dataは配列　しかし、配列にせずに、受け取る際に配列にしても良い
     {
         $stmt = $this->db_manager->dbh->prepare('UPDATE ' . $this->table . ' SET title = ?, contents = ? WHERE id = ?');
         $stmt->execute($data);

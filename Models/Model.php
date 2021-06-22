@@ -58,6 +58,7 @@ class Model
         $stmt->execute([$id]);
 
         $task = $stmt->fetch();
+        // fetchは１剣だけを取り出す組み込み関数。
 
         return $task;
     }
