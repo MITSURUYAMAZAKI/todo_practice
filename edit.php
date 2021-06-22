@@ -1,13 +1,15 @@
 <?php
 // * 下記を追加
 // 1. ファイルの読み込み
+require_once("./Models/Task.php");
+require_once("./function.php");
 
 
 // 2. データの受け取り
-
+$id = $_GET['id'];
 
 // 3. DBへのデータ保存
-
+$task = (new Task())-> findById($id);
 
 ?>
 <!DOCTYPE html>
@@ -37,6 +39,7 @@
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" class="form-control" name="title" id="title" value="<?= $task['title']; ?>">
+                        <!-- ↑編集前に入力されていたテキストが残るようにしている -->
                     </div>
                     <div class="form-group">
                         <label for="contents">Contents</label>

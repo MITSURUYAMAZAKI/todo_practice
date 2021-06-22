@@ -10,7 +10,7 @@ require_once('./function.php');
 $task = new Task();
 $tasks =  $task->getAll();
 // getAllは「Model.php」に記載したメソッド
-var_dump($tasks);
+// var_dump($tasks);
 
 
 ?>
@@ -71,10 +71,11 @@ var_dump($tasks);
                         </p>
                         <div class="text-right d-flex justify-content-end">
                             <!-- * href内を変更する -->
-                            <a href="edit.php" class="btn text-success">EDIT</a>
+                            <a href="edit.php?id=<?= h($task['id']);?>" class="btn text-success">EDIT</a>
+                            <!-- GET通信で$task['id']を引き渡す -->
                             <form action="delete.php" method="post">
                                 <!-- * valueの中にtaskのidが入るようにする -->
-                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="id" value="<?= h($task['id']);?>">
                                 <button type="submit" class="btn text-danger">DELETE</button>
                             </form>
                         </div>
